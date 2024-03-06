@@ -16,20 +16,20 @@ namespace CMP1903_A1_2324
          */
         public static void testDie() 
         {
-			//Roll the dice
-          	int testRoll = Die.Roll();
-			//use debug.assert to make sure it is right and if it's not to display a message
-			Debug.Assert(testRoll > 0 && testRoll < 7, "Roll has not ran as intended");
-		}
+		//Roll the dice
+        	int testRoll = Die.Roll();
+		//use debug.assert to make sure it is right and if it's not to display a message
+		Debug.Assert(testRoll > 0 && testRoll < 7, "Roll has not ran as intended");
+	}
 		
 		//Test the sum method is working properly, and if it's not, say so
-		public static void testSum() 
+	public static void testSum() 
         {
-			//Sum the dices
-          	int testSum = Game.DiceTotal();
-			//use debug.assert to make sure it is right and if it's not to display a message
-			Debug.Assert(testSum > 2 && testSum < 19, "Dice sum has not ran as intended.");
-		}
+	//Sum the dice
+        	int testSum = Game.DiceTotal();
+	//use debug.assert to make sure it is right and if not then display a message
+		Debug.Assert(testSum > 2 && testSum < 19, "Dice sum has not ran as intended.");
+	}
         //Method
     }
 }
