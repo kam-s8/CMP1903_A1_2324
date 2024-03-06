@@ -12,7 +12,6 @@ namespace CMP1903_A1_2324
          * The Die class should contain one property to hold the current die value,
          * and one method that rolls the die, returns and integer and takes no parameters.
         */
-        class Die:
     static void __init__(self):
         //Initialize the current value of the die
         self.current_value = 0
