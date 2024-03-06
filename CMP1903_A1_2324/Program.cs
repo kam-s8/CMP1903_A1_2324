@@ -14,8 +14,9 @@ namespace CMP1903_A1_2324
              * Create a Game object and call its methods.
              * Create a Testing object to verify the output and operation of the other classes.
              */
-            Testing.testDie();
-            Game.DiceTotal();
+            Game.DiceTotal(); //roll the dice and sum them
+            Testing.testDie(); //check if dice are rolling as intended
+            Testing.TestSum();  //check if sums are correct
         }
     }
 }
