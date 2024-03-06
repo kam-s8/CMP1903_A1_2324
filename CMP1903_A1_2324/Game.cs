@@ -9,12 +9,12 @@ namespace CMP1903_A1_2324
     internal class Game
     {
             class Game:
-    def __init__(self):
+    static void __init__(self):
         //Initialize the game with three dice and total score set to zero
         self.dice = [Die() for _ in range(3)]
         self.total = 0
 
-    def roll_all_dice(self):
+    static void roll_all_dice(self):
         //Roll all dice and calculate the total score
         self.total = 0
         for die in self.dice:
