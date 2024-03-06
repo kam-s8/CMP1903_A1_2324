@@ -8,14 +8,23 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+            class Game:
+    def __init__(self):
+        //Initialize the game with three dice and total score set to zero
+        self.dice = [Die() for _ in range(3)]
+        self.total = 0
 
-        //Methods
+    def roll_all_dice(self):
+        //Roll all dice and calculate the total score
+        self.total = 0
+        for die in self.dice:
+            roll_result = die.roll()  # Roll each die
+            print("Die roll:", roll_result)
+            self.total += roll_result  # Accumulate the total score
+
+        print("Total of all rolls:", self.total)
+        return self.total
+
 
     }
 }
