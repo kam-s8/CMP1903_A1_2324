@@ -19,7 +19,7 @@ namespace CMP1903_A1_2324
 			//Roll the dice
           	int testRoll = Die.Roll();
 			//use debug.assert to make sure it is right and if it's not to display a message
-			Debug.Assert(testRoll > 0 && testRoll < 7, "Roll has not ran properly!");
+			Debug.Assert(testRoll > 0 && testRoll < 7, "Roll has not ran as intended");
 		}
 		
 		//Test the sum method is working properly, and if it's not, say so
@@ -28,7 +28,7 @@ namespace CMP1903_A1_2324
 			//Sum the dices
           	int testSum = Game.DiceTotal();
 			//use debug.assert to make sure it is right and if it's not to display a message
-			Debug.Assert(testSum > 2 && testSum < 19, "Dice sum has not ran properly!");
+			Debug.Assert(testSum > 2 && testSum < 19, "Dice sum has not ran as intended.");
 		}
         //Method
     }
