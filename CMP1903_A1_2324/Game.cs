@@ -8,7 +8,6 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-            class Game:
     static void __init__(self):
         //Initialize the game with three dice and total score set to zero
         self.dice = [Die() for _ in range(3)]
