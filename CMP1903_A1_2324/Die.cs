@@ -11,14 +11,25 @@ namespace CMP1903_A1_2324
         /*
          * The Die class should contain one property to hold the current die value,
          * and one method that rolls the die, returns and integer and takes no parameters.
-        */
-    static __init__(self):
-        //Initialize the current value of the die
-        self.current_value = 0
+         */
 
-    static  roll(self):
-        //Roll the die and update its current value
-        self.current_value = random.randint(1, 6)
-        return self.current_value
-    }
+        //Property
+		//Create the die object property with a value so it can be assigned a value
+		public int Value{get; set;}
+        public Die(int value)
+        {
+            Value = value;
+        }
+		
+		//method
+		//create a method that generates a random number 1-6 and it returns that value to anything that calls this method
+		public static int Roll()
+        {
+			//Console.WriteLine("The code is still working.")
+			Random rnd = new Random();
+			//randomise the number
+			int dieNumber = rnd.Next(1, 7);
+			//return the number
+			return dieNumber;
+        }
 }
