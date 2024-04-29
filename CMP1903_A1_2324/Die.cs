@@ -18,10 +18,10 @@ namespace CMP1903_A1_2324
         {
             Value = value;
         }
-	publi Dice();
+	public Dice();
 	 {
-		int total1 = 0;
-		int total2 = 0;
+		public int total1 = 0;
+		public int total2 = 0;
 	 }
 	//method
 	public static int Roll()
