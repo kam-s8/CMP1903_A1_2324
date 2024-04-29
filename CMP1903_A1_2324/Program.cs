@@ -20,7 +20,7 @@ namespace CMP1903_A1_2324
             bool exitRequested = false;
             while (!exitRequested)
             {
-            Console.Write("Enter your choice: ");
+            Console.Write("Enter your choice: 1-3");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -30,8 +30,10 @@ namespace CMP1903_A1_2324
                     // Call the method to start SevensOut
                     Roll();
                     break;
-                case "3":
+                case "2":
                     Console.WriteLine("Here are your stats:");
+                    Console.WriteLine($"Highscore : {maximum}");
+                    Console.WriteLine($"Average Score : {total}");
                     break;
                 case "3":
                     Console.WriteLine("Exiting...");
