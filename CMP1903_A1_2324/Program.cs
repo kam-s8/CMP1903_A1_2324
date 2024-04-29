@@ -14,7 +14,8 @@ namespace CMP1903_A1_2324
             Console.WriteLine("Welcome to the Game Menu!");
             Console.WriteLine("Please select a game to play:");
             Console.WriteLine("1. SevensOut");
-            Console.WriteLine("2. Exit");
+            Console.WriteLine("2. Stats");
+            Console.WriteLine("3. Exit");
 
             bool exitRequested = false;
             while (!exitRequested)
@@ -29,7 +30,10 @@ namespace CMP1903_A1_2324
                     // Call the method to start SevensOut
                     Roll();
                     break;
-                case "2":
+                case "3":
+                    Console.WriteLine("Here are your stats:");
+                    break;
+                case "3":
                     Console.WriteLine("Exiting...");
                     exitRequested = true;
                     break;
@@ -40,7 +44,7 @@ namespace CMP1903_A1_2324
             }
             
             Testing.testDie(); //check if dice are rolling as intended
-            Testing.TestSum();  //check if sums are correct
+            Testing.testMenu(); //check if menu method is running/called
         }
     }
 }
