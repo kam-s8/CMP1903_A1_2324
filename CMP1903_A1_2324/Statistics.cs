@@ -52,24 +52,5 @@ public class Statistics
         }
         return maximum;
     }
-}
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Create an instance of StatisticsTracker
-        StatisticsTracker stats = new StatisticsTracker();
-
-        // Add some sample values
-        stats.AddValue(10);
-        stats.AddValue(20);
-        stats.AddValue(15);
-        stats.AddValue(25);
-
-        // Retrieve and display statistics
-        Console.WriteLine("Average: " + stats.GetAverage());
-        Console.WriteLine("Minimum: " + stats.GetMinimum());
-        Console.WriteLine("Maximum: " + stats.GetMaximum());
-    }
 }
