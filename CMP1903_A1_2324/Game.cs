@@ -8,22 +8,28 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-    public __init__(self):
-        //Initialize the game with three dice and total score set to zero
-        self.dice = [Die() for _ in range(3)]
-        self.total = 0
+     public Dice();
+	 {
+		 public int total1 = 0;
+		 public int total2 = 0;
+	 }
+	//method
+	public static int Roll()
+    {
+		int roll1 = random.Next(1,7);
+		int roll2 = random.Next(1,7);
+		total1 += roll1;
+		total2 += roll2;
 
-    public roll_all_dice(self):
-        //Roll all dice and calculate the total score
-        self.total = 0
-        for die in self.dice:
-            roll_result = die.roll()  # Roll each die
-            print("Die roll:", roll_result)
-            self.total += roll_result  # Accumulate the total score
+		Console.WriteLine($"Current Roll: {roll1}, Total : {total1}");
+		Console.WriteLine($"Current Roll: {roll2}, Total : {total2}");
 
-        print("Total of all rolls:", self.total)
-        return self.total
+		if (roll1 == 7 || roll2 == 7)
+		{
+			Console.WriteLine("One of the dice has landed on 7, stop rolling.");
+		}
 
+    }
 
     }
 }
