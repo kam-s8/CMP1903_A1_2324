@@ -10,11 +10,35 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
-            Game.DiceTotal(); //roll the dice and sum them
+            //make a menu that appears as soon as the program runs
+            Console.WriteLine("Welcome to the Game Menu!");
+            Console.WriteLine("Please select a game to play:");
+            Console.WriteLine("1. SevensOut");
+            Console.WriteLine("2. Exit");
+
+            bool exitRequested = false;
+            while (!exitRequested)
+            {
+            Console.Write("Enter your choice: ");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    Console.WriteLine("Starting SevensOut");
+                    // Call the method to start SevensOut
+                    Roll();
+                    break;
+                case "2":
+                    Console.WriteLine("Exiting...");
+                    exitRequested = true;
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Please enter a number from 1 to 2.");
+                    break;
+            }
+            }
+            
             Testing.testDie(); //check if dice are rolling as intended
             Testing.TestSum();  //check if sums are correct
         }
