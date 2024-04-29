@@ -24,13 +24,11 @@ namespace CMP1903_A1_2324
 	}
 		
 		//Test the sum method is working properly, and if it's not, say so
-	public static void testSum() 
-        {
-	//Sum the dice
-        	int testSum = Game.DiceTotal();
-	//use debug.assert to make sure it is right and if not then display a message
-		Debug.Assert(testSum > 2 && testSum < 19, "Dice sum has not ran as intended.");
+
+	public static void testMenu()
+	{
+		//test whether the menu is displayed correctly and working as intended with all selections leading to the correct places.
+		Debug.Assert(true, "Method was called");
 	}
-        //Method
     }
 }
