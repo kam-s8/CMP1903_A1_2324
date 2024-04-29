@@ -16,6 +16,7 @@ namespace CMP1903_A1_2324
          */
         public static void testDie() 
         {
+		GameObject dice = new GameObject;
 		//Roll the dice
         	int testRoll = Die.Roll();
 		//use debug.assert to make sure it is right and if it's not to display a message
