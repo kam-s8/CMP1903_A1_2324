@@ -8,11 +8,13 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {    
-	static void SevensOut()
-            {
-                Dice dice1 = new Dice();
-                Dice dice2 = new Dice();
-                int totalScore = 0;
+	static void SevensOut()   
+	{
+		try
+		{
+               	 Dice dice1 = new Dice();
+               	 Dice dice2 = new Dice();
+               	 int totalScore = 0;
 
                 while (true)
                 {
@@ -37,6 +39,11 @@ namespace CMP1903_A1_2324
                     }
 
                     Console.WriteLine($"Current total = {totalScore}");
-                }
+		}
+	}
+	catch (Exception ex)
+            {
+                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            }
     }
 }
