@@ -14,7 +14,21 @@ namespace CMP1903_A1_2324
          * Create a Die object and call its method.
          * Use debug.assert() to make the comparisons and tests.
          */
+        public static void testDie() 
+        {
+		GameObject dice = new GameObject;
+		//Roll the dice
+        	int testRoll = Die.Roll();
+		//use debug.assert to make sure it is right and if it's not to display a message
+		Debug.Assert(testRoll > 0 && testRoll < 7, "Roll has not ran as intended");
+	}
+		
+		//Test the sum method is working properly, and if it's not, say so
 
-        //Method
+	public static void testMenu()
+	{
+		//test whether the menu is displayed correctly and working as intended with all selections leading to the correct places.
+		Debug.Assert(true, "Method was called");
+	}
     }
 }

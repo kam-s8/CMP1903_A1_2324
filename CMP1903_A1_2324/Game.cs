@@ -7,15 +7,36 @@ using System.Threading.Tasks;
 namespace CMP1903_A1_2324
 {
     internal class Game
-    {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+    {    
+	static void SevensOut()
+            {
+                Dice dice1 = new Dice();
+                Dice dice2 = new Dice();
+                int totalScore = 0;
 
-        //Methods
+                while (true)
+                {
+                    int roll1 = dice1.Roll();
+                    int roll2 = dice2.Roll();
+                    int rollSum = roll1 + roll2;
 
+                    Console.WriteLine($"Roll: [{roll1}, {roll2}] (Sum={rollSum})");
+
+                    if (rollSum == 7)
+                    {
+                        Console.WriteLine($"End total = {totalScore}");
+                        break;
+                    }
+                    else if (roll1 == roll2) // Check if it's a double
+                    {
+                        totalScore += rollSum * 2;
+                    }
+                    else
+                    {
+                        totalScore += rollSum;
+                    }
+
+                    Console.WriteLine($"Current total = {totalScore}");
+                }
     }
 }
