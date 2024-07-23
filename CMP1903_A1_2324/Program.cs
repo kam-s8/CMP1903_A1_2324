@@ -28,7 +28,7 @@ namespace CMP1903_A1_2324
                 case "1":
                     Console.WriteLine("Starting SevensOut");
                     // Call the method to start SevensOut
-                    Roll();
+                    SevensOut();
                     break;
                 case "2":
                     Console.WriteLine("Here are your stats:");
@@ -43,7 +43,38 @@ namespace CMP1903_A1_2324
                     Console.WriteLine("Invalid choice. Please enter a number from 1 to 2.");
                     break;
             }
-            }
+                
+            static void SevensOut()
+            {
+                Dice dice1 = new Dice();
+                Dice dice2 = new Dice();
+                int totalScore = 0;
+
+                while (true)
+                {
+                    int roll1 = dice1.Roll();
+                    int roll2 = dice2.Roll();
+                    int rollSum = roll1 + roll2;
+
+                    Console.WriteLine($"Roll: [{roll1}, {roll2}] (Sum={rollSum})");
+
+                    if (rollSum == 7)
+                    {
+                        Console.WriteLine($"End total = {totalScore}");
+                        break;
+                    }
+                    else if (roll1 == roll2) // Check if it's a double
+                    {
+                        totalScore += rollSum * 2;
+                    }
+                    else
+                    {
+                        totalScore += rollSum;
+                    }
+
+                    Console.WriteLine($"Current total = {totalScore}");
+                }
+        }
             
             Testing.testDie(); //check if dice are rolling as intended
             Testing.testMenu(); //check if menu method is running/called
