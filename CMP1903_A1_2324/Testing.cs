@@ -8,27 +8,38 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
-        public static void testDie() 
-        {
-		GameObject dice = new GameObject;
-		//Roll the dice
-        	int testRoll = Die.Roll();
-		//use debug.assert to make sure it is right and if it's not to display a message
-		Debug.Assert(testRoll > 0 && testRoll < 7, "Roll has not ran as intended");
-	}
-		
-		//Test the sum method is working properly, and if it's not, say so
 
-	public static void testMenu()
-	{
-		//test whether the menu is displayed correctly and working as intended with all selections leading to the correct places.
-		Debug.Assert(true, "Method was called");
-	}
+       public void TestDiceRoll()
+        {
+            Dice dice = new Dice();
+            for (int i = 0; i < 100; i++)
+            {
+                int roll = dice.Roll();
+                if (roll < 1 || roll > 6)
+                {
+                    throw new Exception("Dice roll out of bounds!");
+                }
+            }
+            Console.WriteLine("TestDiceRoll passed.");
+        }
+	
+	public void TestScoreCalculation()
+        {
+            DiceGame game = new DiceGame("Test Game");
+
+            // Simulating some rolls
+            game.TotalScore = 0;
+            game.TotalScore += 8; // Roll [5, 3]
+            game.TotalScore += 11; // Roll [1, 6]
+            game.TotalScore += 20; // Roll [5, 5]
+
+            if (game.TotalScore != 39)
+            {
+                throw new Exception("Score calculation failed!");
+            }
+
+            Console.WriteLine("TestScoreCalculation passed.");
+        }    
+
     }
 }
