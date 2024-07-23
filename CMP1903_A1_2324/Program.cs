@@ -40,7 +40,7 @@ namespace CMP1903_A1_2324
                     exitRequested = true;
                     break;
                 default:
-                    Console.WriteLine("Invalid choice. Please enter a number from 1 to 2.");
+                    Console.WriteLine("Invalid choice. Please enter a number from 1 to 3.");
                     break;
             }
                 
