@@ -7,29 +7,36 @@ using System.Threading.Tasks;
 namespace CMP1903_A1_2324
 {
     internal class Game
-    {
-     public Dice();
-	 {
-		 public int total1 = 0;
-		 public int total2 = 0;
-	 }
-	//method
-	public static int Roll()
-    {
-		int roll1 = random.Next(1,7);
-		int roll2 = random.Next(1,7);
-		total1 += roll1;
-		total2 += roll2;
+    {    
+	static void SevensOut()
+            {
+                Dice dice1 = new Dice();
+                Dice dice2 = new Dice();
+                int totalScore = 0;
 
-		Console.WriteLine($"Current Roll: {roll1}, Total : {total1}");
-		Console.WriteLine($"Current Roll: {roll2}, Total : {total2}");
+                while (true)
+                {
+                    int roll1 = dice1.Roll();
+                    int roll2 = dice2.Roll();
+                    int rollSum = roll1 + roll2;
 
-		if (roll1 == 7 || roll2 == 7)
-		{
-			Console.WriteLine("One of the dice has landed on 7, stop rolling.");
-		}
+                    Console.WriteLine($"Roll: [{roll1}, {roll2}] (Sum={rollSum})");
 
-    }
+                    if (rollSum == 7)
+                    {
+                        Console.WriteLine($"End total = {totalScore}");
+                        break;
+                    }
+                    else if (roll1 == roll2) // Check if it's a double
+                    {
+                        totalScore += rollSum * 2;
+                    }
+                    else
+                    {
+                        totalScore += rollSum;
+                    }
 
+                    Console.WriteLine($"Current total = {totalScore}");
+                }
     }
 }
