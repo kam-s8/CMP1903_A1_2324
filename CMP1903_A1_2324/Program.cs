@@ -46,9 +46,9 @@ namespace CMP1903_A1_2324
                 
             
         }
-            
-            Testing.testDie(); //check if dice are rolling as intended
-            Testing.testMenu(); //check if menu method is running/called
+            //run all tests
+            Testing.TestDiceRoll(); 
+            Testing.TestScoreCalculation(); 
         }
     }
 }
